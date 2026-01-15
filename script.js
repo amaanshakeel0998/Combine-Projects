@@ -23,55 +23,91 @@ resizeCanvas();
 
 const mouse = { x: width / 2, y: height / 2 };
 
-const particleCount = 150;
+const particleCount = 350;
 const particles = [];
-const maxDistance = 130;
+const maxDistance = 100;
 
 // Particle constructor
 class Particle {
-    constructor() {
-        this.x = Math.random() * width;
-        this.y = Math.random() * height;
-        this.size = Math.random() * 2 + 1;
-        this.vx = (Math.random() - 0.5) * 1;
-        this.vy = (Math.random() - 0.5) * 1;
-        this.opacity = Math.random() * 0.6 + 0.3;
-        this.type = Math.random() < 0.25 ? "twinkle" : "normal";
+    constructor(x, y) {
+        this.init(x, y);
+    }
+
+    init(x, y) {
+        // Targeted respawning: find areas away from cursor to fill "empty" space
+        this.x = x || Math.random() * width;
+        this.y = y || Math.random() * height;
+
+        if (!x && !y) {
+            const dx = this.x - mouse.x;
+            const dy = this.y - mouse.y;
+            // If random spot is too close to mouse, push it to the opposite side of the screen
+            if (Math.sqrt(dx * dx + dy * dy) < 250) {
+                this.x = (this.x + width / 2) % width;
+                this.y = (this.y + height / 2) % height;
+            }
+        }
+
+        this.size = Math.random() * 1.5 + 1;
+        this.vx = (Math.random() - 0.5) * 5; // Very high initial burst
+        this.vy = (Math.random() - 0.5) * 5;
+        this.opacity = Math.random() * 0.4 + 0.15;
+        this.type = Math.random() < 0.2 ? "twinkle" : "normal";
+        this.maxSpeed = Math.random() * 4 + 6; // Very fast travel speed
+        this.friction = 0.99; // Minimal friction to maintain speed
+        this.angleOffset = Math.random() * Math.PI * 2;
     }
 
     update() {
         this.x += this.vx;
         this.y += this.vy;
 
-        // Attraction to cursor
+        // Attraction to cursor with swarm jitter
         const dx = mouse.x - this.x;
         const dy = mouse.y - this.y;
-        const dist = Math.sqrt(dx*dx + dy*dy);
-        if(dist < 300){
-            const force = (300 - dist) / 300;
-            this.vx += dx * force * 0.02;
-            this.vy += dy * force * 0.02;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+
+        // Decreased attachment distance to 200px
+        if (dist < 200) {
+            const force = (200 - dist) / 200;
+            const swirlX = Math.cos(this.angleOffset) * 8;
+            const swirlY = Math.sin(this.angleOffset) * 8;
+            this.vx += (dx + swirlX) * force * 0.04; // Increased attraction force
+            this.vy += (dy + swirlY) * force * 0.04;
+            this.angleOffset += 0.1;
         }
 
-        this.vx *= 0.95;
-        this.vy *= 0.95;
+        // Prevent collapse: if reached cursor, respawn to fill empty areas
+        if (dist < 40) {
+            this.init(); // Reset to a random location
+        }
+
+        // Speed limit
+        const speed = Math.sqrt(this.vx * this.vx + this.vy * this.vy);
+        if (speed > this.maxSpeed) {
+            this.vx = (this.vx / speed) * this.maxSpeed;
+            this.vy = (this.vy / speed) * this.maxSpeed;
+        }
+
+        this.vx *= this.friction;
+        this.vy *= this.friction;
 
         // Wrap edges
-        if(this.x < 0) this.x = width;
-        if(this.x > width) this.x = 0;
-        if(this.y < 0) this.y = height;
-        if(this.y > height) this.y = 0;
+        if (this.x < 0) this.x = width;
+        if (this.x > width) this.x = 0;
+        if (this.y < 0) this.y = height;
+        if (this.y > height) this.y = 0;
 
-        if(this.type === "twinkle"){
-            this.opacity += (Math.random() - 0.5) * 0.05;
-            this.opacity = Math.min(Math.max(this.opacity, 0.3), 0.9);
+        if (this.type === "twinkle") {
+            this.opacity += (Math.random() - 0.5) * 0.02;
+            this.opacity = Math.min(Math.max(this.opacity, 0.1), 0.7);
         }
     }
 
     draw() {
         ctx.beginPath();
-        ctx.arc(this.x, this.y, this.size, 0, Math.PI*2);
-        ctx.fillStyle = `rgba(99,102,241,${this.opacity})`;
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(99, 102, 241, ${this.opacity})`;
         ctx.fill();
     }
 }

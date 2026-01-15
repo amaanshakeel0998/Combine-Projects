@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture Scheduling System - Blog</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-900 text-white min-h-screen">
+    <div class="fixed top-0 left-0 w-full z-0 h-screen">
+        <canvas id="bg-canvas"></canvas>
+    </div>
+
+    <nav class="fixed top-0 left-0 w-full z-50 px-8 py-6 flex justify-between items-center bg-gray-900/40 backdrop-blur-md border-b border-white/5">
+        <a href="index.html" class="logo font-bold text-xl tracking-tighter">PORTFOLIO</a>
+        <a href="index.html" class="nav-link">Back to Home</a>
+    </nav>
+
+    <main class="relative z-10 pt-32 pb-20 px-4">
+        <article class="max-w-3xl mx-auto bg-gray-800/40 backdrop-blur-xl p-8 md:p-12 rounded-3xl border border-white/10 shadow-2xl">
+            <header class="mb-12">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">Academic Timetable Generator</h1>
+                <div class="flex items-center gap-4 text-gray-400 text-sm">
+                    <span>January 10, 2026</span>
+                    <span class="w-1 h-1 bg-gray-600 rounded-full"></span>
+                    <span>System Architecture</span>
+                </div>
+            </header>
+
+            <div class="prose prose-invert max-w-none text-gray-300 leading-relaxed space-y-6 text-lg">
+                <p>The Academic Timetable Generator is a robust Flask-based application designed to automate the creation of complex lecture schedules while maintaining strict academic constraints.</p>
+                
+                <h2 class="text-2xl font-semibold text-white mt-10 mb-4">Exhaustive Scheduling</h2>
+                <p>The system utilizes a <strong>deterministic, exhaustive scheduling algorithm</strong> that validates schedules against large datasets. It ensures that teachers, subjects, and classrooms are allocated optimally without any overlapping conflicts.</p>
+
+                <h2 class="text-2xl font-semibold text-white mt-10 mb-4">Multi-Format Exports</h2>
+                <p>One of its core strengths is the ability to generate professional-grade documentation. The system can export schedules directly to <strong>Excel (.xlsx)</strong> using OpenPyXL and <strong>PDF</strong> using ReportLab, complete with custom color-coding for different subjects.</p>
+
+                <div class="bg-emerald-500/10 border border-emerald-500/20 p-6 rounded-2xl mt-8">
+                    <h3 class="text-emerald-400 font-bold mb-2 text-xl">Technical Stack</h3>
+                    <ul class="grid grid-cols-2 gap-2 text-sm">
+                        <li>• Python (Flask)</li>
+                        <li>• ReportLab (PDF Generation)</li>
+                        <li>• OpenPyXL (Excel Processing)</li>
+                        <li>• In-memory Session Storage</li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+    <script src="script.js"></script>
+</body>
+</html>

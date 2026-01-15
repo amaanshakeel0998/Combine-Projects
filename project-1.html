@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Scheduling System - Blog</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-900 text-white min-h-screen">
+    <div class="fixed top-0 left-0 w-full z-0 h-screen">
+        <canvas id="bg-canvas"></canvas>
+    </div>
+
+    <nav class="fixed top-0 left-0 w-full z-50 px-8 py-6 flex justify-between items-center bg-gray-900/40 backdrop-blur-md border-b border-white/5">
+        <a href="index.html" class="logo font-bold text-xl tracking-tighter">PORTFOLIO</a>
+        <a href="index.html" class="nav-link">Back to Home</a>
+    </nav>
+
+    <main class="relative z-10 pt-32 pb-20 px-4">
+        <article class="max-w-3xl mx-auto bg-gray-800/40 backdrop-blur-xl p-8 md:p-12 rounded-3xl border border-white/10 shadow-2xl">
+            <header class="mb-12">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">Exam Scheduling System</h1>
+                <div class="flex items-center gap-4 text-gray-400 text-sm">
+                    <span>January 15, 2026</span>
+                    <span class="w-1 h-1 bg-gray-600 rounded-full"></span>
+                    <span>Academic Tools</span>
+                </div>
+            </header>
+
+            <div class="prose prose-invert max-w-none text-gray-300 leading-relaxed space-y-6 text-lg">
+                <p>The Exam Scheduling System is a comprehensive tool designed to simplify the complex task of creating conflict-free examination datesheets for large educational institutions.</p>
+                
+                <h2 class="text-2xl font-semibold text-white mt-10 mb-4">Core Features</h2>
+                <p>One of the standout features is the <strong>Theme Customization Panel</strong>, allowing users to personalize the interface by adjusting header, body, card, and accent colors. This ensures a comfortable working environment for administrators during long scheduling sessions.</p>
+
+                <h2 class="text-2xl font-semibold text-white mt-10 mb-4">Intelligent Sessions</h2>
+                <p>The system includes a <strong>Restore Session</strong> capability, ensuring that progress is never lost. If a user accidentally closes their browser or loses connection, they can pick up exactly where they left off with a single click.</p>
+
+                <div class="bg-blue-500/10 border border-blue-500/20 p-6 rounded-2xl mt-8">
+                    <h3 class="text-blue-400 font-bold mb-2 text-xl">Technical Stack</h3>
+                    <ul class="grid grid-cols-2 gap-2 text-sm">
+                        <li>• Vanilla JavaScript</li>
+                        <li>• Dynamic CSS Custom Properties</li>
+                        <li>• Font Awesome Integration</li>
+                        <li>• LocalStorage Persistence</li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+    <script src="script.js"></script>
+</body>
+</html>

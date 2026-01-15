@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Projects</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-gray-900 text-white min-h-screen flex items-center justify-center relative overflow-hidden">
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 w-full z-50 px-8 py-6 flex justify-between items-center bg-gray-900/40 backdrop-blur-md border-b border-white/5">
+        <div class="logo font-bold text-xl tracking-tighter">PORTFOLIO</div>
+        <nav>
+            <ul class="flex gap-8 items-center">
+                <li class="relative group">
+                    <button id="about-btn" class="nav-link flex items-center gap-1 focus:outline-none">
+                        About
+                        <svg class="w-4 h-4 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <ul id="about-dropdown" class="absolute left-0 mt-4 w-48 bg-gray-800 rounded-xl overflow-hidden shadow-2xl opacity-0 invisible translate-y-2 transition-all duration-200 z-50">
+                        <li><a href="project-1.html" target="_blank" rel="noopener noreferrer" class="dropdown-item">Exam Scheduling System</a></li>
+                        <li><a href="project-2.html" target="_blank" rel="noopener noreferrer" class="dropdown-item">Lecture Scheduling System</a></li>
+                        <li><a href="project-3.html" target="_blank" rel="noopener noreferrer" class="dropdown-item">Project Three</a></li>
+                    </ul>
+                </li>
+                <li><a href="#contact" class="nav-link">Contact us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Background animation -->
+    <canvas id="bg-canvas" class="absolute top-0 left-0 z-0"></canvas>
+
+    <main class="card-container relative z-10">
+        <h1 class="title">What I’ve Built</h1>
+        <p class="subtitle">Click to explore my work</p>
+
+        <div class="button-group">
+            <a href="https://amaanshakeel0998.github.io/Datesheet-Generator/" target="_blank" rel="noopener noreferrer" class="project-btn">Exam Scheduling System</a>
+            <a href="project-2.html" target="_blank" rel="noopener noreferrer" class="project-btn">Lecture Scheduling System</a>
+            <a href="project-3.html" target="_blank" rel="noopener noreferrer" class="project-btn">Project Three</a>
+        </div>
+    </main>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

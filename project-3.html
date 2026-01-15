@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Three - Blog</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-900 text-white min-h-screen">
+    <div class="fixed top-0 left-0 w-full z-0 h-screen">
+        <canvas id="bg-canvas"></canvas>
+    </div>
+
+    <nav class="fixed top-0 left-0 w-full z-50 px-8 py-6 flex justify-between items-center bg-gray-900/40 backdrop-blur-md border-b border-white/5">
+        <a href="index.html" class="logo font-bold text-xl tracking-tighter">PORTFOLIO</a>
+        <a href="index.html" class="nav-link">Back to Home</a>
+    </nav>
+
+    <main class="relative z-10 pt-32 pb-20 px-4">
+        <article class="max-w-3xl mx-auto bg-gray-800/40 backdrop-blur-xl p-8 md:p-12 rounded-3xl border border-white/10 shadow-2xl">
+            <header class="mb-12">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">Creative Portfolio Project</h1>
+                <div class="flex items-center gap-4 text-gray-400 text-sm">
+                    <span>January 05, 2026</span>
+                    <span class="w-1 h-1 bg-gray-600 rounded-full"></span>
+                    <span>Front-end Development</span>
+                </div>
+            </header>
+
+            <div class="prose prose-invert max-w-none text-gray-300 leading-relaxed space-y-6 text-lg">
+                <p>Project Three focuses on the aesthetic and interactive aspects of modern web design, utilizing advanced CSS and JavaScript techniques.</p>
+                
+                <h2 class="text-2xl font-semibold text-white mt-10 mb-4">Design Philosophy</h2>
+                <p>The goal was to create an immersive experience that responds to user input in a meaningful way. This includes custom cursors, particle backgrounds, and glassmorphism UI elements.</p>
+
+                <h2 class="text-2xl font-semibold text-white mt-10 mb-4">Technical Details</h2>
+                <p>The project leverages the HTML5 Canvas API for high-performance animations and uses custom event listeners to create a reactive user interface.</p>
+
+                <div class="bg-orange-500/10 border border-orange-500/20 p-6 rounded-2xl mt-8">
+                    <h3 class="text-orange-400 font-bold mb-2 text-xl">Key Technologies</h3>
+                    <ul class="grid grid-cols-2 gap-2 text-sm">
+                        <li>• HTML5 Canvas</li>
+                        <li>• GSAP</li>
+                        <li>• Tailwind CSS</li>
+                        <li>• Vanilla JS</li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+    <script src="script.js"></script>
+</body>
+</html>

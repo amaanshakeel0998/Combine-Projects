@@ -23,7 +23,7 @@ resizeCanvas();
 
 const mouse = { x: width / 2, y: height / 2 };
 
-const particleCount = 350;
+const particleCount = 550;
 const particles = [];
 const maxDistance = 100;
 

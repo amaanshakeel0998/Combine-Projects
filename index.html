@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="bg-gray-900 text-white min-h-screen flex items-center justify-center relative overflow-hidden">
+<body class="bg-gray-900 text-white min-h-screen flex items-center justify-center relative overflow-x-hidden">
 
     <!-- Header -->
     <header class="fixed top-0 left-0 w-full z-50 px-8 py-6 flex justify-between items-center bg-gray-900/40 backdrop-blur-md border-b border-white/5">
@@ -55,14 +55,32 @@
                     <span class="btn-text">Lecture Scheduling System</span>
                 </div>
             </a>
-            <a href="#" target="_blank" rel="noopener noreferrer" class="project-btn">
+            <a href="https://room-pi-eight.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-btn">
                 <div class="btn-content">
                     <svg class="project-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
-                    <span class="btn-text">Project Three</span>
+                    <span class="btn-text">Building Handling System</span>
                 </div>
             </a>
         </div>
     </main>
+
+    <!-- Team Members Section -->
+    <div class="fixed bottom-10 left-1/2 -translate-x-1/2 z-50 flex flex-col items-center gap-6">
+        <div id="team-container" class="hidden gap-4">
+            <div class="team-card bg-gray-800/80 backdrop-blur-md px-6 py-3 rounded-xl border border-white/10 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-[#6366f1]/30 hover:border-[#6366f1]/50 group cursor-default">
+                <span class="text-gray-300 group-hover:text-white group-hover:brightness-150 transition-all font-medium">Muhammad Amaan</span>
+            </div>
+            <div class="team-card bg-gray-800/80 backdrop-blur-md px-6 py-3 rounded-xl border border-white/10 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-[#6366f1]/30 hover:border-[#6366f1]/50 group cursor-default">
+                <span class="text-gray-300 group-hover:text-white group-hover:brightness-150 transition-all font-medium">Muhammad Ali Eesa</span>
+            </div>
+            <div class="team-card bg-gray-800/80 backdrop-blur-md px-6 py-3 rounded-xl border border-white/10 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-[#6366f1]/30 hover:border-[#6366f1]/50 group cursor-default">
+                <span class="text-gray-300 group-hover:text-white group-hover:brightness-150 transition-all font-medium">Abdul Sammad</span>
+            </div>
+        </div>
+        <button id="team-toggle-btn" class="bg-[#6366f1] hover:bg-[#4f46e5] text-white px-10 py-3.5 rounded-xl font-semibold shadow-xl shadow-[#6366f1]/20 transition-all active:scale-95">
+            Developed By
+        </button>
+    </div>
 
     <!-- Custom Cursor -->
     <div class="cursor-dot"></div>

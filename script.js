@@ -127,14 +127,16 @@ window.addEventListener("mousemove", e => {
     mouse.y = e.clientY - rect.top;
 
     // Custom cursor animation
-    cursorDot.style.left = `${e.clientX}px`;
-    cursorDot.style.top = `${e.clientY}px`;
-    
-    // Smooth outline follower
-    cursorOutline.animate({
-        left: `${e.clientX}px`,
-        top: `${e.clientY}px`
-    }, { duration: 500, fill: "forwards" });
+    if (cursorDot && cursorOutline) {
+        cursorDot.style.left = `${e.clientX}px`;
+        cursorDot.style.top = `${e.clientY}px`;
+        
+        // Smooth outline follower
+        cursorOutline.animate({
+            left: `${e.clientX}px`,
+            top: `${e.clientY}px`
+        }, { duration: 150, fill: "forwards" });
+    }
 });
 
 // Boom Effect on Click
@@ -152,25 +154,52 @@ window.addEventListener("mousedown", () => {
     });
 
     // Visual feedback for cursor
-    cursorOutline.style.transform = 'translate(-50%, -50%) scale(0.5)';
-    setTimeout(() => {
-        cursorOutline.style.transform = 'translate(-50%, -50%) scale(1)';
-    }, 100);
+    if (cursorOutline) {
+        cursorOutline.style.transform = 'translate(-50%, -50%) scale(0.5)';
+        setTimeout(() => {
+            cursorOutline.style.transform = 'translate(-50%, -50%) scale(1)';
+        }, 100);
+    }
 });
 
-// Cursor scaling on hover
-document.querySelectorAll('a, button').forEach(el => {
+/* ===== Cursor scaling on hover ===== */
+document.querySelectorAll('a, button, .team-card').forEach(el => {
     el.addEventListener('mouseenter', () => {
-        cursorDot.style.transform = 'translate(-50%, -50%) scale(2)';
-        cursorOutline.style.transform = 'translate(-50%, -50%) scale(1.5)';
-        cursorOutline.style.backgroundColor = 'rgba(99, 102, 241, 0.1)';
+        if (cursorDot && cursorOutline) {
+            cursorDot.style.transform = 'translate(-50%, -50%) scale(2)';
+            cursorOutline.style.transform = 'translate(-50%, -50%) scale(1.5)';
+            cursorOutline.style.backgroundColor = 'rgba(99, 102, 241, 0.1)';
+        }
     });
     el.addEventListener('mouseleave', () => {
-        cursorDot.style.transform = 'translate(-50%, -50%) scale(1)';
-        cursorOutline.style.transform = 'translate(-50%, -50%) scale(1)';
-        cursorOutline.style.backgroundColor = 'transparent';
+        if (cursorDot && cursorOutline) {
+            cursorDot.style.transform = 'translate(-50%, -50%) scale(1)';
+            cursorOutline.style.transform = 'translate(-50%, -50%) scale(1)';
+            cursorOutline.style.backgroundColor = 'transparent';
+        }
     });
 });
+
+/* ===== Team Toggle Logic ===== */
+const teamToggleBtn = document.getElementById('team-toggle-btn');
+const teamContainer = document.getElementById('team-container');
+
+if (teamToggleBtn && teamContainer) {
+    teamToggleBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isHidden = teamContainer.classList.contains('hidden');
+        
+        if (isHidden) {
+            teamContainer.classList.remove('hidden');
+            teamContainer.classList.add('flex');
+            teamToggleBtn.textContent = 'Hide Team';
+        } else {
+            teamContainer.classList.add('hidden');
+            teamContainer.classList.remove('flex');
+            teamToggleBtn.textContent = 'Developed By';
+        }
+    });
+}
 
 /* ===== Dropdown Toggle ===== */
 const aboutBtn = document.getElementById('about-btn');

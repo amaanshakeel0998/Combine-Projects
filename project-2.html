@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lecture Scheduling System - Blog</title>
+    <meta name="description" content="Lecture Scheduling System - Automated timetable generator with teacher availability management">
+    <title>Lecture Scheduling System - Project Details</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -18,33 +19,170 @@
     </nav>
 
     <main class="relative z-10 pt-32 pb-20 px-4">
-        <article class="max-w-3xl mx-auto bg-gray-800/40 backdrop-blur-xl p-8 md:p-12 rounded-3xl border border-white/10 shadow-2xl">
+        <article class="max-w-4xl mx-auto bg-gray-800/40 backdrop-blur-xl p-8 md:p-12 rounded-3xl border border-white/10 shadow-2xl">
             <header class="mb-12">
-                <h1 class="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">Academic Timetable Generator</h1>
-                <div class="flex items-center gap-4 text-gray-400 text-sm">
+                <div class="inline-block px-4 py-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full mb-6">
+                    <span class="text-emerald-400 text-sm font-semibold">Academic Automation</span>
+                </div>
+                <h1 class="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">Lecture Scheduling System</h1>
+                <p class="text-xl text-gray-400 mb-6">Multi-semester automated timetable generator with intelligent teacher-subject-classroom allocation</p>
+                <div class="flex flex-wrap items-center gap-4 text-gray-400 text-sm">
                     <span>January 10, 2026</span>
                     <span class="w-1 h-1 bg-gray-600 rounded-full"></span>
                     <span>System Architecture</span>
+                    <span class="w-1 h-1 bg-gray-600 rounded-full"></span>
+                    <a href="https://amaanshakeel0998.github.io/Lecture-Scheduling-system/" target="_blank" rel="noopener noreferrer" class="text-emerald-400 hover:text-emerald-300 transition-colors">View Live Project →</a>
                 </div>
             </header>
 
-            <div class="prose prose-invert max-w-none text-gray-300 leading-relaxed space-y-6 text-lg">
-                <p>The Academic Timetable Generator is a robust Flask-based application designed to automate the creation of complex lecture schedules while maintaining strict academic constraints.</p>
-                
-                <h2 class="text-2xl font-semibold text-white mt-10 mb-4">Exhaustive Scheduling</h2>
-                <p>The system utilizes a <strong>deterministic, exhaustive scheduling algorithm</strong> that validates schedules against large datasets. It ensures that teachers, subjects, and classrooms are allocated optimally without any overlapping conflicts.</p>
+            <div class="prose prose-invert max-w-none text-gray-300 leading-relaxed space-y-8 text-lg">
+                <section>
+                    <h2 class="text-3xl font-semibold text-white mb-4">Overview</h2>
+                    <p>The Lecture Scheduling System is a Flask-based web application that automates the creation of complex academic timetables. Using a deterministic, exhaustive scheduling algorithm, it validates schedules against large datasets to ensure optimal allocation of teachers, subjects, and classrooms without any overlapping conflicts.</p>
+                </section>
 
-                <h2 class="text-2xl font-semibold text-white mt-10 mb-4">Multi-Format Exports</h2>
-                <p>One of its core strengths is the ability to generate professional-grade documentation. The system can export schedules directly to <strong>Excel (.xlsx)</strong> using OpenPyXL and <strong>PDF</strong> using ReportLab, complete with custom color-coding for different subjects.</p>
+                <section>
+                    <h2 class="text-3xl font-semibold text-white mb-4">Core Features</h2>
+                    
+                    <div class="grid md:grid-cols-2 gap-6 mt-6">
+                        <div class="bg-emerald-500/5 border border-emerald-500/10 p-6 rounded-2xl">
+                            <h3 class="text-emerald-400 font-bold mb-3 text-xl">🎓 Multi-Semester Support</h3>
+                            <p class="text-gray-300 text-base">Generate timetables for multiple semesters simultaneously with independent configurations. Each semester maintains its own subjects, teachers, and scheduling requirements.</p>
+                        </div>
 
-                <div class="bg-emerald-500/10 border border-emerald-500/20 p-6 rounded-2xl mt-8">
-                    <h3 class="text-emerald-400 font-bold mb-2 text-xl">Technical Stack</h3>
-                    <ul class="grid grid-cols-2 gap-2 text-sm">
-                        <li>• Python (Flask)</li>
-                        <li>• ReportLab (PDF Generation)</li>
-                        <li>• OpenPyXL (Excel Processing)</li>
-                        <li>• In-memory Session Storage</li>
+                        <div class="bg-emerald-500/5 border border-emerald-500/10 p-6 rounded-2xl">
+                            <h3 class="text-emerald-400 font-bold mb-3 text-xl">👨‍🏫 Teacher Availability</h3>
+                            <p class="text-gray-300 text-base">Advanced teacher management system that tracks subject expertise and day-wise availability. Teachers can be assigned multiple subjects and specify which days they're available to teach.</p>
+                        </div>
+
+                        <div class="bg-emerald-500/5 border border-emerald-500/10 p-6 rounded-2xl">
+                            <h3 class="text-emerald-400 font-bold mb-3 text-xl">🏫 Classroom Allocation</h3>
+                            <p class="text-gray-300 text-base">Intelligent classroom management ensuring no double-booking. The system allocates available classrooms to sessions while respecting time slot constraints and room availability.</p>
+                        </div>
+
+                        <div class="bg-emerald-500/5 border border-emerald-500/10 p-6 rounded-2xl">
+                            <h3 class="text-emerald-400 font-bold mb-3 text-xl">📅 Flexible Time Slots</h3>
+                            <p class="text-gray-300 text-base">Customizable time slots for each day of the week. Define morning, afternoon, and evening sessions with different durations. Supports Monday through Saturday scheduling.</p>
+                        </div>
+
+                        <div class="bg-emerald-500/5 border border-emerald-500/10 p-6 rounded-2xl">
+                            <h3 class="text-emerald-400 font-bold mb-3 text-xl">📊 Professional Exports</h3>
+                            <p class="text-gray-300 text-base">Export timetables to beautifully formatted PDF documents using ReportLab or Excel spreadsheets using OpenPyXL. Both formats include color-coded subjects and professional layouts.</p>
+                        </div>
+
+                        <div class="bg-emerald-500/5 border border-emerald-500/10 p-6 rounded-2xl">
+                            <h3 class="text-emerald-400 font-bold mb-3 text-xl">⚡ Conflict Resolution</h3>
+                            <p class="text-gray-300 text-base">Real-time conflict detection identifies teacher conflicts, classroom overlaps, and scheduling errors. Provides detailed conflict reports with suggested resolutions.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 class="text-3xl font-semibold text-white mb-4">Scheduling Algorithm</h2>
+                    <p>The system employs a sophisticated exhaustive scheduling algorithm that:</p>
+                    <ul class="space-y-2 mt-4 text-gray-300">
+                        <li class="flex items-start gap-3">
+                            <span class="text-emerald-400 mt-1">•</span>
+                            <span><strong>Validates teacher availability:</strong> Ensures teachers are not scheduled on their unavailable days or in overlapping time slots</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-emerald-400 mt-1">•</span>
+                            <span><strong>Distributes sessions evenly:</strong> Spreads subject sessions across the week based on sessions-per-week requirements</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-emerald-400 mt-1">•</span>
+                            <span><strong>Optimizes classroom usage:</strong> Maximizes classroom utilization while preventing double-bookings</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-emerald-400 mt-1">•</span>
+                            <span><strong>Handles constraints:</strong> Respects all hard constraints (availability, capacity) and soft constraints (preferences)</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-emerald-400 mt-1">•</span>
+                            <span><strong>Generates conflict reports:</strong> Provides detailed feedback when schedules cannot be generated due to constraint violations</span>
+                        </li>
                     </ul>
+                </section>
+
+                <section>
+                    <h2 class="text-3xl font-semibold text-white mb-4">Advanced Features</h2>
+                    <div class="space-y-6 mt-6">
+                        <div class="border-l-4 border-emerald-500 pl-6">
+                            <h4 class="font-semibold text-white text-xl mb-2">Subject Management</h4>
+                            <p class="text-gray-400 text-base">Configure subjects with departments, session frequency, and teacher assignments. The system intelligently handles subjects that require multiple weekly sessions.</p>
+                        </div>
+                        <div class="border-l-4 border-emerald-500 pl-6">
+                            <h4 class="font-semibold text-white text-xl mb-2">Theme Customization</h4>
+                            <p class="text-gray-400 text-base">Full visual customization with preset themes and custom color pickers for header, body, cards, and accent colors. Changes persist across sessions.</p>
+                        </div>
+                        <div class="border-l-4 border-emerald-500 pl-6">
+                            <h4 class="font-semibold text-white text-xl mb-2">Data Persistence</h4>
+                            <p class="text-gray-400 text-base">In-memory session storage ensures your configuration is maintained during the session. Import/export functionality allows saving and loading complete configurations.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 class="text-3xl font-semibold text-white mb-4">User Workflow</h2>
+                    <div class="space-y-4 mt-6">
+                        <div class="flex gap-4 items-start">
+                            <div class="flex-shrink-0 w-8 h-8 bg-emerald-500 rounded-full flex items-center justify-center text-white font-bold text-sm">1</div>
+                            <div>
+                                <h4 class="font-semibold text-white mb-1">Configure Semesters</h4>
+                                <p class="text-gray-400 text-base">Set the number of semesters and initialize their configurations</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 items-start">
+                            <div class="flex-shrink-0 w-8 h-8 bg-emerald-500 rounded-full flex items-center justify-center text-white font-bold text-sm">2</div>
+                            <div>
+                                <h4 class="font-semibold text-white mb-1">Define Schedule Parameters</h4>
+                                <p class="text-gray-400 text-base">Select working days (Monday-Saturday) and add custom time slots for each day</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 items-start">
+                            <div class="flex-shrink-0 w-8 h-8 bg-emerald-500 rounded-full flex items-center justify-center text-white font-bold text-sm">3</div>
+                            <div>
+                                <h4 class="font-semibold text-white mb-1">Add Teachers & Subjects</h4>
+                                <p class="text-gray-400 text-base">Register teachers with their subject expertise and day-wise availability, then add subjects with session requirements</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 items-start">
+                            <div class="flex-shrink-0 w-8 h-8 bg-emerald-500 rounded-full flex items-center justify-center text-white font-bold text-sm">4</div>
+                            <div>
+                                <h4 class="font-semibold text-white mb-1">Configure Classrooms</h4>
+                                <p class="text-gray-400 text-base">Add available classrooms for lecture allocation</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 items-start">
+                            <div class="flex-shrink-0 w-8 h-8 bg-emerald-500 rounded-full flex items-center justify-center text-white font-bold text-sm">5</div>
+                            <div>
+                                <h4 class="font-semibold text-white mb-1">Generate & Review</h4>
+                                <p class="text-gray-400 text-base">Generate the timetable, review for conflicts, and export to PDF or Excel</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="bg-emerald-500/10 border border-emerald-500/20 p-8 rounded-2xl mt-10">
+                    <h3 class="text-emerald-400 font-bold mb-4 text-2xl">Technology Stack</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-base">
+                        <div class="text-center p-3 bg-gray-800/50 rounded-lg">
+                            <div class="font-semibold text-white mb-1">Backend</div>
+                            <div class="text-gray-400 text-sm">Python (Flask)</div>
+                        </div>
+                        <div class="text-center p-3 bg-gray-800/50 rounded-lg">
+                            <div class="font-semibold text-white mb-1">PDF Export</div>
+                            <div class="text-gray-400 text-sm">ReportLab</div>
+                        </div>
+                        <div class="text-center p-3 bg-gray-800/50 rounded-lg">
+                            <div class="font-semibold text-white mb-1">Excel Export</div>
+                            <div class="text-gray-400 text-sm">OpenPyXL</div>
+                        </div>
+                        <div class="text-center p-3 bg-gray-800/50 rounded-lg">
+                            <div class="font-semibold text-white mb-1">Storage</div>
+                            <div class="text-gray-400 text-sm">Session Management</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </article>

@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Three - Blog</title>
+    <meta name="description" content="Building Handling System - 3D building and room visualization with scheduling">
+    <title>Building Handling System - Project Details</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -18,33 +19,196 @@
     </nav>
 
     <main class="relative z-10 pt-32 pb-20 px-4">
-        <article class="max-w-3xl mx-auto bg-gray-800/40 backdrop-blur-xl p-8 md:p-12 rounded-3xl border border-white/10 shadow-2xl">
+        <article class="max-w-4xl mx-auto bg-gray-800/40 backdrop-blur-xl p-8 md:p-12 rounded-3xl border border-white/10 shadow-2xl">
             <header class="mb-12">
-                <h1 class="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">Creative Portfolio Project</h1>
-                <div class="flex items-center gap-4 text-gray-400 text-sm">
+                <div class="inline-block px-4 py-2 bg-orange-500/10 border border-orange-500/20 rounded-full mb-6">
+                    <span class="text-orange-400 text-sm font-semibold">3D Visualization</span>
+                </div>
+                <h1 class="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">Building Handling System</h1>
+                <p class="text-xl text-gray-400 mb-6">Interactive 3D building and room management system with visual floor plans and scheduling</p>
+                <div class="flex flex-wrap items-center gap-4 text-gray-400 text-sm">
                     <span>January 05, 2026</span>
                     <span class="w-1 h-1 bg-gray-600 rounded-full"></span>
-                    <span>Front-end Development</span>
+                    <span>Visualization & Management</span>
+                    <span class="w-1 h-1 bg-gray-600 rounded-full"></span>
+                    <a href="https://room-pi-eight.vercel.app/" target="_blank" rel="noopener noreferrer" class="text-orange-400 hover:text-orange-300 transition-colors">View Live Project →</a>
                 </div>
             </header>
 
-            <div class="prose prose-invert max-w-none text-gray-300 leading-relaxed space-y-6 text-lg">
-                <p>Project Three focuses on the aesthetic and interactive aspects of modern web design, utilizing advanced CSS and JavaScript techniques.</p>
-                
-                <h2 class="text-2xl font-semibold text-white mt-10 mb-4">Design Philosophy</h2>
-                <p>The goal was to create an immersive experience that responds to user input in a meaningful way. This includes custom cursors, particle backgrounds, and glassmorphism UI elements.</p>
+            <div class="prose prose-invert max-w-none text-gray-300 leading-relaxed space-y-8 text-lg">
+                <section>
+                    <h2 class="text-3xl font-semibold text-white mb-4">Overview</h2>
+                    <p>The Building Handling System is an innovative web-based application that provides a visual 3D representation of campus buildings, floors, and rooms. This system combines spatial management with scheduling functionality, allowing administrators to manage room allocations, track capacity, and visualize building layouts in an intuitive interface.</p>
+                </section>
 
-                <h2 class="text-2xl font-semibold text-white mt-10 mb-4">Technical Details</h2>
-                <p>The project leverages the HTML5 Canvas API for high-performance animations and uses custom event listeners to create a reactive user interface.</p>
+                <section>
+                    <h2 class="text-3xl font-semibold text-white mb-4">Key Features</h2>
+                    
+                    <div class="grid md:grid-cols-2 gap-6 mt-6">
+                        <div class="bg-orange-500/5 border border-orange-500/10 p-6 rounded-2xl">
+                            <h3 class="text-orange-400 font-bold mb-3 text-xl">🏗️ 3D Building Generator</h3>
+                            <p class="text-gray-300 text-base">Create and visualize multiple buildings in a 3D environment. Each building can have custom names and multiple floors with interactive visual representation.</p>
+                        </div>
 
-                <div class="bg-orange-500/10 border border-orange-500/20 p-6 rounded-2xl mt-8">
-                    <h3 class="text-orange-400 font-bold mb-2 text-xl">Key Technologies</h3>
-                    <ul class="grid grid-cols-2 gap-2 text-sm">
-                        <li>• HTML5 Canvas</li>
-                        <li>• GSAP</li>
-                        <li>• Tailwind CSS</li>
-                        <li>• Vanilla JS</li>
+                        <div class="bg-orange-500/5 border border-orange-500/10 p-6 rounded-2xl">
+                            <h3 class="text-orange-400 font-bold mb-3 text-xl">📐 Multi-Floor Management</h3>
+                            <p class="text-gray-300 text-base">Configure buildings with multiple floors. Each floor maintains its own set of rooms and can be viewed independently in the 3D visualization.</p>
+                        </div>
+
+                        <div class="bg-orange-500/5 border border-orange-500/10 p-6 rounded-2xl">
+                            <h3 class="text-orange-400 font-bold mb-3 text-xl">🚪 Room Configuration</h3>
+                            <p class="text-gray-300 text-base">Add rooms with detailed information including name, student capacity, and scheduling. Each room can be assigned to specific lectures, teachers, and time slots.</p>
+                        </div>
+
+                        <div class="bg-orange-500/5 border border-orange-500/10 p-6 rounded-2xl">
+                            <h3 class="text-orange-400 font-bold mb-3 text-xl">📅 Integrated Scheduling</h3>
+                            <p class="text-gray-300 text-base">Schedule lectures in rooms with day and time slot selection. Track which teacher is using which room for which subject and semester.</p>
+                        </div>
+
+                        <div class="bg-orange-500/5 border border-orange-500/10 p-6 rounded-2xl">
+                            <h3 class="text-orange-400 font-bold mb-3 text-xl">👥 Capacity Management</h3>
+                            <p class="text-gray-300 text-base">Define student capacity for each room to ensure proper space allocation. Helps in planning room assignments based on class sizes.</p>
+                        </div>
+
+                        <div class="bg-orange-500/5 border border-orange-500/10 p-6 rounded-2xl">
+                            <h3 class="text-orange-400 font-bold mb-3 text-xl">🎨 Custom Themes</h3>
+                            <p class="text-gray-300 text-base">Personalize the interface with preset themes (Blue, Purple, Green, Orange, Red, Dark) or create custom color schemes for header, body, cards, and accents.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 class="text-3xl font-semibold text-white mb-4">Room Scheduling Features</h2>
+                    <p>The system provides comprehensive room scheduling capabilities:</p>
+                    <ul class="space-y-2 mt-4 text-gray-300">
+                        <li class="flex items-start gap-3">
+                            <span class="text-orange-400 mt-1">•</span>
+                            <span><strong>Day-wise scheduling:</strong> Assign lectures to specific days (Monday through Saturday)</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-orange-400 mt-1">•</span>
+                            <span><strong>Time slot management:</strong> Multiple time slots including 08:30-10:00, 10:00-11:30, 11:30-01:00, 01:00-02:30, and 02:30-04:00</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-orange-400 mt-1">•</span>
+                            <span><strong>Teacher assignment:</strong> Link specific teachers to room bookings for better resource tracking</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-orange-400 mt-1">•</span>
+                            <span><strong>Subject & semester tracking:</strong> Associate each booking with subjects and semester information</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-orange-400 mt-1">•</span>
+                            <span><strong>Department organization:</strong> Support for CS, SE, BBA, AF, DDCA, ELS, ID, and Psychology departments</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-orange-400 mt-1">•</span>
+                            <span><strong>Floor schedules:</strong> View comprehensive schedules for entire floors showing all room allocations</span>
+                        </li>
                     </ul>
+                </section>
+
+                <section>
+                    <h2 class="text-3xl font-semibold text-white mb-4">Visual 3D Representation</h2>
+                    <div class="space-y-6 mt-6">
+                        <div class="border-l-4 border-orange-500 pl-6">
+                            <h4 class="font-semibold text-white text-xl mb-2">Interactive Building Models</h4>
+                            <p class="text-gray-400 text-base">Buildings are rendered in 3D with the ability to rotate, zoom, and explore each structure. The visual representation helps administrators understand spatial relationships and building layouts.</p>
+                        </div>
+                        <div class="border-l-4 border-orange-500 pl-6">
+                            <h4 class="font-semibold text-white text-xl mb-2">Floor Visualization</h4>
+                            <p class="text-gray-400 text-base">Each floor can be viewed independently with its room layout. This makes it easy to see available spaces and plan room assignments effectively.</p>
+                        </div>
+                        <div class="border-l-4 border-orange-500 pl-6">
+                            <h4 class="font-semibold text-white text-xl mb-2">Progress Tracking</h4>
+                            <p class="text-gray-400 text-base">Real-time progress indicators show the construction status of buildings as data is being processed, providing visual feedback during the generation process.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 class="text-3xl font-semibold text-white mb-4">User Workflow</h2>
+                    <div class="space-y-4 mt-6">
+                        <div class="flex gap-4 items-start">
+                            <div class="flex-shrink-0 w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold text-sm">1</div>
+                            <div>
+                                <h4 class="font-semibold text-white mb-1">Create Buildings</h4>
+                                <p class="text-gray-400 text-base">Define the number of buildings and assign custom names to each one</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 items-start">
+                            <div class="flex-shrink-0 w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold text-sm">2</div>
+                            <div>
+                                <h4 class="font-semibold text-white mb-1">Configure Floors</h4>
+                                <p class="text-gray-400 text-base">Select each building and specify the number of floors it contains</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 items-start">
+                            <div class="flex-shrink-0 w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold text-sm">3</div>
+                            <div>
+                                <h4 class="font-semibold text-white mb-1">Add Rooms</h4>
+                                <p class="text-gray-400 text-base">For each floor, add rooms with names, capacities, and scheduling details</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 items-start">
+                            <div class="flex-shrink-0 w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold text-sm">4</div>
+                            <div>
+                                <h4 class="font-semibold text-white mb-1">Schedule Lectures</h4>
+                                <p class="text-gray-400 text-base">Assign lectures to rooms by selecting days, time slots, teachers, subjects, and departments</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 items-start">
+                            <div class="flex-shrink-0 w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold text-sm">5</div>
+                            <div>
+                                <h4 class="font-semibold text-white mb-1">Visualize & Manage</h4>
+                                <p class="text-gray-400 text-base">Generate the 3D buildings, view floor schedules, and manage room allocations visually</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 class="text-3xl font-semibold text-white mb-4">Technical Highlights</h2>
+                    <div class="grid md:grid-cols-2 gap-6 mt-6">
+                        <div class="bg-gray-800/50 p-6 rounded-xl border border-white/5">
+                            <h4 class="font-semibold text-white mb-2">Data Management</h4>
+                            <p class="text-gray-400 text-sm">Efficient data structure for managing hierarchical relationships between buildings, floors, and rooms with associated scheduling information.</p>
+                        </div>
+                        <div class="bg-gray-800/50 p-6 rounded-xl border border-white/5">
+                            <h4 class="font-semibold text-white mb-2">Visual Feedback</h4>
+                            <p class="text-gray-400 text-sm">Progress bars and status indicators provide real-time feedback during building generation and data processing.</p>
+                        </div>
+                        <div class="bg-gray-800/50 p-6 rounded-xl border border-white/5">
+                            <h4 class="font-semibold text-white mb-2">Responsive Design</h4>
+                            <p class="text-gray-400 text-sm">Fully responsive interface that works seamlessly across desktop, tablet, and mobile devices.</p>
+                        </div>
+                        <div class="bg-gray-800/50 p-6 rounded-xl border border-white/5">
+                            <h4 class="font-semibold text-white mb-2">Clear All Function</h4>
+                            <p class="text-gray-400 text-sm">Quick reset functionality to clear all data and start fresh with new building configurations.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="bg-orange-500/10 border border-orange-500/20 p-8 rounded-2xl mt-10">
+                    <h3 class="text-orange-400 font-bold mb-4 text-2xl">Technology Stack</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-base">
+                        <div class="text-center p-3 bg-gray-800/50 rounded-lg">
+                            <div class="font-semibold text-white mb-1">Frontend</div>
+                            <div class="text-gray-400 text-sm">HTML5 & JavaScript</div>
+                        </div>
+                        <div class="text-center p-3 bg-gray-800/50 rounded-lg">
+                            <div class="font-semibold text-white mb-1">3D Graphics</div>
+                            <div class="text-gray-400 text-sm">Canvas/WebGL</div>
+                        </div>
+                        <div class="text-center p-3 bg-gray-800/50 rounded-lg">
+                            <div class="font-semibold text-white mb-1">Deployment</div>
+                            <div class="text-gray-400 text-sm">Vercel</div>
+                        </div>
+                        <div class="text-center p-3 bg-gray-800/50 rounded-lg">
+                            <div class="font-semibold text-white mb-1">Styling</div>
+                            <div class="text-gray-400 text-sm">Custom CSS</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </article>

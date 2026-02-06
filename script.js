@@ -7,7 +7,14 @@ document.querySelectorAll('.project-btn').forEach((btn, index) => {
 
 /* ===== Fixed Multi-Layer Particle Background ===== */
 const canvas = document.getElementById("bg-canvas");
-const ctx = canvas.getContext("2d");
+if (!canvas) {
+    console.error('Canvas element not found');
+}
+
+const ctx = canvas?.getContext("2d");
+if (!ctx) {
+    console.error('Canvas context not available');
+}
 
 let width = window.innerWidth;
 let height = window.innerHeight;
@@ -15,8 +22,10 @@ let height = window.innerHeight;
 function resizeCanvas() {
     width = window.innerWidth;
     height = window.innerHeight;
-    canvas.width = width;
-    canvas.height = height;
+    if (canvas) {
+        canvas.width = width;
+        canvas.height = height;
+    }
 }
 
 resizeCanvas();
@@ -105,6 +114,7 @@ class Particle {
     }
 
     draw() {
+        if (!ctx) return;
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx.fillStyle = `rgba(99, 102, 241, ${this.opacity})`;
@@ -122,6 +132,8 @@ const cursorDot = document.querySelector(".cursor-dot");
 const cursorOutline = document.querySelector(".cursor-outline");
 
 window.addEventListener("mousemove", e => {
+    if (!canvas) return;
+    
     const rect = canvas.getBoundingClientRect();
     mouse.x = e.clientX - rect.left;
     mouse.y = e.clientY - rect.top;
@@ -193,10 +205,12 @@ if (teamToggleBtn && teamContainer) {
             teamContainer.classList.remove('hidden');
             teamContainer.classList.add('flex');
             teamToggleBtn.textContent = 'Hide Team';
+            teamToggleBtn.setAttribute('aria-expanded', 'true');
         } else {
             teamContainer.classList.add('hidden');
             teamContainer.classList.remove('flex');
             teamToggleBtn.textContent = 'Developed By';
+            teamToggleBtn.setAttribute('aria-expanded', 'false');
         }
     });
 }
@@ -204,24 +218,43 @@ if (teamToggleBtn && teamContainer) {
 /* ===== Dropdown Toggle ===== */
 const aboutBtn = document.getElementById('about-btn');
 const aboutDropdown = document.getElementById('about-dropdown');
-const arrowIcon = aboutBtn.querySelector('svg');
 
-aboutBtn.addEventListener('click', (e) => {
-    e.stopPropagation();
-    aboutDropdown.classList.toggle('show-dropdown');
-    arrowIcon.classList.toggle('rotate-180');
+if (aboutBtn && aboutDropdown) {
+    const arrowIcon = aboutBtn.querySelector('svg');
+    
+    aboutBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isOpen = aboutDropdown.classList.contains('show-dropdown');
+        aboutDropdown.classList.toggle('show-dropdown');
+        if (arrowIcon) {
+            arrowIcon.classList.toggle('rotate-180');
+        }
+        aboutBtn.setAttribute('aria-expanded', !isOpen);
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', () => {
+        aboutDropdown.classList.remove('show-dropdown');
+        if (arrowIcon) {
+            arrowIcon.classList.remove('rotate-180');
+        }
+        aboutBtn.setAttribute('aria-expanded', 'false');
+    });
+}
+
+// Debounced resize handler
+let resizeTimeout;
+window.addEventListener("resize", () => {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(() => {
+        resizeCanvas();
+    }, 150);
 });
-
-document.addEventListener('click', () => {
-    aboutDropdown.classList.remove('show-dropdown');
-    arrowIcon.classList.remove('rotate-180');
-});
-
-// Resize
-window.addEventListener("resize", resizeCanvas);
 
 // Draw connecting lines
 function connectParticles() {
+    if (!ctx) return;
+    
     for(let i=0;i<particleCount;i++){
         for(let j=i+1;j<particleCount;j++){
             const dx = particles[i].x - particles[j].x;
@@ -241,10 +274,15 @@ function connectParticles() {
 
 // Animation loop
 function animate() {
+    if (!ctx) return;
+    
     ctx.clearRect(0,0,width,height);
     particles.forEach(p => { p.update(); p.draw(); });
     connectParticles();
     requestAnimationFrame(animate);
 }
 
-animate();
+// Start animation only if canvas exists
+if (canvas && ctx) {
+    animate();
+}

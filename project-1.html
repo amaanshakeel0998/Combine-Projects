@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exam Scheduling System - Blog</title>
+    <meta name="description" content="Exam Scheduling System - Automated datesheet generator with conflict detection">
+    <title>Exam Scheduling System - Project Details</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -18,33 +19,152 @@
     </nav>
 
     <main class="relative z-10 pt-32 pb-20 px-4">
-        <article class="max-w-3xl mx-auto bg-gray-800/40 backdrop-blur-xl p-8 md:p-12 rounded-3xl border border-white/10 shadow-2xl">
+        <article class="max-w-4xl mx-auto bg-gray-800/40 backdrop-blur-xl p-8 md:p-12 rounded-3xl border border-white/10 shadow-2xl">
             <header class="mb-12">
+                <div class="inline-block px-4 py-2 bg-blue-500/10 border border-blue-500/20 rounded-full mb-6">
+                    <span class="text-blue-400 text-sm font-semibold">Academic Automation</span>
+                </div>
                 <h1 class="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">Exam Scheduling System</h1>
-                <div class="flex items-center gap-4 text-gray-400 text-sm">
+                <p class="text-xl text-gray-400 mb-6">Intelligent datesheet generator with conflict detection and automated invigilator assignment</p>
+                <div class="flex flex-wrap items-center gap-4 text-gray-400 text-sm">
                     <span>January 15, 2026</span>
                     <span class="w-1 h-1 bg-gray-600 rounded-full"></span>
                     <span>Academic Tools</span>
+                    <span class="w-1 h-1 bg-gray-600 rounded-full"></span>
+                    <a href="https://amaanshakeel0998.github.io/Datesheet-Generator/" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300 transition-colors">View Live Project →</a>
                 </div>
             </header>
 
-            <div class="prose prose-invert max-w-none text-gray-300 leading-relaxed space-y-6 text-lg">
-                <p>The Exam Scheduling System is a comprehensive tool designed to simplify the complex task of creating conflict-free examination datesheets for large educational institutions.</p>
-                
-                <h2 class="text-2xl font-semibold text-white mt-10 mb-4">Core Features</h2>
-                <p>One of the standout features is the <strong>Theme Customization Panel</strong>, allowing users to personalize the interface by adjusting header, body, card, and accent colors. This ensures a comfortable working environment for administrators during long scheduling sessions.</p>
+            <div class="prose prose-invert max-w-none text-gray-300 leading-relaxed space-y-8 text-lg">
+                <section>
+                    <h2 class="text-3xl font-semibold text-white mb-4">Overview</h2>
+                    <p>The Exam Scheduling System is a comprehensive web-based solution designed to automate the complex process of creating conflict-free examination datesheets for educational institutions. Built with vanilla JavaScript and modern web technologies, this system eliminates manual scheduling errors and saves hundreds of hours of administrative work.</p>
+                </section>
 
-                <h2 class="text-2xl font-semibold text-white mt-10 mb-4">Intelligent Sessions</h2>
-                <p>The system includes a <strong>Restore Session</strong> capability, ensuring that progress is never lost. If a user accidentally closes their browser or loses connection, they can pick up exactly where they left off with a single click.</p>
+                <section>
+                    <h2 class="text-3xl font-semibold text-white mb-4">Key Features</h2>
+                    
+                    <div class="grid md:grid-cols-2 gap-6 mt-6">
+                        <div class="bg-blue-500/5 border border-blue-500/10 p-6 rounded-2xl">
+                            <h3 class="text-blue-400 font-bold mb-3 text-xl">📅 Smart Scheduling</h3>
+                            <p class="text-gray-300 text-base">Automatically generates conflict-free exam datesheets by analyzing course enrollments, student retakes, and semester overlaps. The algorithm ensures no student has multiple exams on the same day.</p>
+                        </div>
 
-                <div class="bg-blue-500/10 border border-blue-500/20 p-6 rounded-2xl mt-8">
-                    <h3 class="text-blue-400 font-bold mb-2 text-xl">Technical Stack</h3>
-                    <ul class="grid grid-cols-2 gap-2 text-sm">
-                        <li>• Vanilla JavaScript</li>
-                        <li>• Dynamic CSS Custom Properties</li>
-                        <li>• Font Awesome Integration</li>
-                        <li>• LocalStorage Persistence</li>
+                        <div class="bg-blue-500/5 border border-blue-500/10 p-6 rounded-2xl">
+                            <h3 class="text-blue-400 font-bold mb-3 text-xl">👥 Invigilator Management</h3>
+                            <p class="text-gray-300 text-base">Intelligent assignment of invigilators based on availability, maximum duty limits, and leave dates. Automatically distributes workload fairly across all available staff.</p>
+                        </div>
+
+                        <div class="bg-blue-500/5 border border-blue-500/10 p-6 rounded-2xl">
+                            <h3 class="text-blue-400 font-bold mb-3 text-xl">🎨 Theme Customization</h3>
+                            <p class="text-gray-300 text-base">Fully customizable interface with preset themes (Blue, Purple, Green, Orange, Red, Dark) and custom color picker for header, body, cards, and accent colors.</p>
+                        </div>
+
+                        <div class="bg-blue-500/5 border border-blue-500/10 p-6 rounded-2xl">
+                            <h3 class="text-blue-400 font-bold mb-3 text-xl">💾 Session Persistence</h3>
+                            <p class="text-gray-300 text-base">Automatic session saving using LocalStorage. Never lose your work - restore your entire configuration with one click even after closing the browser.</p>
+                        </div>
+
+                        <div class="bg-blue-500/5 border border-blue-500/10 p-6 rounded-2xl">
+                            <h3 class="text-blue-400 font-bold mb-3 text-xl">📊 Multi-Format Export</h3>
+                            <p class="text-gray-300 text-base">Export generated datesheets to professional PDF documents with custom institute logos and branding, or download as CSV for further processing in Excel.</p>
+                        </div>
+
+                        <div class="bg-blue-500/5 border border-blue-500/10 p-6 rounded-2xl">
+                            <h3 class="text-blue-400 font-bold mb-3 text-xl">⚠️ Conflict Detection</h3>
+                            <p class="text-gray-300 text-base">Real-time conflict detection system that identifies and highlights scheduling conflicts, student exam overlaps, and invigilator availability issues.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 class="text-3xl font-semibold text-white mb-4">Technical Implementation</h2>
+                    <p>The system handles complex scheduling constraints including:</p>
+                    <ul class="space-y-2 mt-4 text-gray-300">
+                        <li class="flex items-start gap-3">
+                            <span class="text-blue-400 mt-1">•</span>
+                            <span><strong>Multi-semester support:</strong> Manage exams across 8 different semesters simultaneously</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-blue-400 mt-1">•</span>
+                            <span><strong>Department-wise organization:</strong> Support for CS, SE, BBA, Psychology, AF, ID, ELS, and DDCA departments</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-blue-400 mt-1">•</span>
+                            <span><strong>Retake handling:</strong> Special handling for students retaking courses from previous semesters</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-blue-400 mt-1">•</span>
+                            <span><strong>CSV/Excel import:</strong> Bulk import student enrollments from spreadsheets</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-blue-400 mt-1">•</span>
+                            <span><strong>Multiple time slots:</strong> Flexible scheduling with morning and afternoon exam sessions</span>
+                        </li>
                     </ul>
+                </section>
+
+                <section>
+                    <h2 class="text-3xl font-semibold text-white mb-4">User Workflow</h2>
+                    <div class="space-y-4 mt-6">
+                        <div class="flex gap-4 items-start">
+                            <div class="flex-shrink-0 w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold text-sm">1</div>
+                            <div>
+                                <h4 class="font-semibold text-white mb-1">Configure Exam Settings</h4>
+                                <p class="text-gray-400 text-base">Set date range, select time slots, and add departments with their respective semesters</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 items-start">
+                            <div class="flex-shrink-0 w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold text-sm">2</div>
+                            <div>
+                                <h4 class="font-semibold text-white mb-1">Add Courses & Exams</h4>
+                                <p class="text-gray-400 text-base">Define courses with codes and names for each semester and department</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 items-start">
+                            <div class="flex-shrink-0 w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold text-sm">3</div>
+                            <div>
+                                <h4 class="font-semibold text-white mb-1">Manage Invigilators</h4>
+                                <p class="text-gray-400 text-base">Add staff members with their availability, max duty limits, and leave dates</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 items-start">
+                            <div class="flex-shrink-0 w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold text-sm">4</div>
+                            <div>
+                                <h4 class="font-semibold text-white mb-1">Import Student Data</h4>
+                                <p class="text-gray-400 text-base">Bulk import from CSV/Excel or add students manually with their course enrollments</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 items-start">
+                            <div class="flex-shrink-0 w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold text-sm">5</div>
+                            <div>
+                                <h4 class="font-semibold text-white mb-1">Generate & Export</h4>
+                                <p class="text-gray-400 text-base">Click generate to create the datesheet, review conflicts, and export to PDF or CSV</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="bg-blue-500/10 border border-blue-500/20 p-8 rounded-2xl mt-10">
+                    <h3 class="text-blue-400 font-bold mb-4 text-2xl">Technology Stack</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-base">
+                        <div class="text-center p-3 bg-gray-800/50 rounded-lg">
+                            <div class="font-semibold text-white mb-1">Frontend</div>
+                            <div class="text-gray-400 text-sm">Vanilla JavaScript</div>
+                        </div>
+                        <div class="text-center p-3 bg-gray-800/50 rounded-lg">
+                            <div class="font-semibold text-white mb-1">Styling</div>
+                            <div class="text-gray-400 text-sm">CSS Custom Properties</div>
+                        </div>
+                        <div class="text-center p-3 bg-gray-800/50 rounded-lg">
+                            <div class="font-semibold text-white mb-1">Icons</div>
+                            <div class="text-gray-400 text-sm">Font Awesome</div>
+                        </div>
+                        <div class="text-center p-3 bg-gray-800/50 rounded-lg">
+                            <div class="font-semibold text-white mb-1">Storage</div>
+                            <div class="text-gray-400 text-sm">LocalStorage API</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </article>

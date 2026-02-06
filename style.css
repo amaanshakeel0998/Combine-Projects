@@ -188,13 +188,19 @@ article ul {
 
 @media (max-width: 768px) {
     body {
-        padding-bottom: 180px; /* Add space for team section on mobile */
+        padding-top: 100px; /* Space for fixed header */
+        padding-bottom: 40px; /* Reasonable bottom spacing */
+    }
+    
+    main.card-container {
+        margin-top: 20px; /* Extra spacing below header */
+        margin-bottom: 30px; /* Space before team section */
     }
     
     .button-group {
         flex-direction: column;
         align-items: center;
-        margin-bottom: 2rem; /* Extra spacing before team section */
+        margin-bottom: 1.5rem;
     }
     
     .project-btn {
@@ -207,7 +213,6 @@ article ul {
     
     .card-container {
         padding: 2rem 1.5rem;
-        margin-bottom: 2rem;
     }
     
     .title { 
